@@ -1,0 +1,230 @@
+/* 
+  Custom Portfolio Design - "Abdulkadir Musajee" Style
+  Mirroring: Power Innovations DIY & TimeAway
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --bg-body: #f8fafc; /* Soft Slate background from TimeAway */
+  --bg-card: #ffffff;
+  --primary: #a01a31; /* Deep Maroon from Power Innovations */
+  --secondary: #0ea5e9; /* Vibrant Blue from TimeAway */
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05); /* Tighter, more subtle shadow */
+  --radius-xl: 12px; /* Standard professional radius (reduced from 24px) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Custom Navigation */
+nav {
+  background: white;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-left: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section - Bold & Clean */
+.hero {
+  padding: 120px 0 80px;
+  background: white;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+/* Modern Rounded Cards */
+.card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-light);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Section Titles */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* Buttons like Power Innovations / TimeAway */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.btn-outline {
+  background: white;
+  border: 2px solid var(--border-light);
+  color: var(--text-dark);
+}
+
+/* Gallery Style from Previous Step but cleaner */
+.project-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.project-gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+.project-img {
+  flex: 0 0 300px;
+  height: 200px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  font-size: 2.5rem;
+  border: 1px solid var(--border-light);
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating WhatsApp (Human Touch) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Footer Highlights */
+footer {
+  background: white;
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}
